@@ -25,6 +25,13 @@ ingress {
     cidr_blocks = ["3.80.79.34/32"]
   }
 
+ingress {
+    description = "TLS from VPC"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   egress {
     from_port   = 0
